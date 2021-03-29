@@ -58,10 +58,10 @@ if (config.service.mqtt.toString() === 'true') {
 			config.mqtt.qos = process.env.MQTT_QOS;
 		}
 	} else {
-		config.mqtt.broker = "";     // string
+		config.mqtt.broker = "mqtt://192.168.50.187";     // string
 		config.mqtt.port = 1883;     // integer  MQTT Broker Port (Default:1883) 
-		config.mqtt.username = "";   // string   MQTT Username 
-		config.mqtt.password = "";   // string   MQTT Password
+		config.mqtt.username = "admin";   // string   MQTT Username 
+		config.mqtt.password = "good4admin";   // string   MQTT Password
 		config.mqtt.retain = true;
 	}
 	console.log("[config.mqtt.host]:" + config.mqtt.broker);

@@ -1,7 +1,9 @@
 ---
 tags: PaulhuHsieh
 ---
-### SMP message simulator
+# SMP message simulator
+
+topic: smp/metering/data 
 
 ## 初始化:
 
@@ -11,8 +13,6 @@ tags: PaulhuHsieh
 
 --- 在根目錄下的config.js修改:
 
-1. config.topic (送發的topic) 
-![](https://i.imgur.com/lSL6zjd.png)
 2. config.mqtt.broker (http://${URL})
 3. config.mqtt.port (預設為1883)
 4. config.mqtt.username (帳號)
@@ -25,10 +25,29 @@ tags: PaulhuHsieh
 
 修改mqtt.js內
 
-duration的值可以改變送發資料的頻率
+duration的值可以改變送發資料的頻率 (單位為毫秒)
 
-傳至mqtt的值則需自行撰寫一個標準的json格式資料
+### 變數產生一率用Math.random()來隨機產生
 
-範例為 BaseData= '{"hello":"world"}';
+變數randomVarUsername隨機產生 0~5的數值
+用來隨機選擇一個固定的userId與username
+![](https://i.imgur.com/o6mfrvs.png)
+S
+
+變數randomVarDeviceName隨機產生 0~5的數值
+用來隨機選擇一個固定的deviceId與deviceName
+![](https://i.imgur.com/SfRG6TV.png)
+S
+
+變數randomVarAppName隨機產生 0~7的數值
+用來隨機選擇一個固定的AppId與AppName
+![](https://i.imgur.com/c16sq5R.png)
+
+
+變數randomVarCharge隨機產生 0~2的數值
+用來隨機選擇一個固定的chargeType
+![](https://i.imgur.com/4VI6ZAh.png)
+
+最後透過publish function來送至broker
 
 
