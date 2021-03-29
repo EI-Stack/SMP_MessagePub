@@ -5,7 +5,11 @@ tags: PaulhuHsieh
 
 ## 初始化:
 
-在根目錄下的config.js修改
+--- 安裝nodejs環境
+
+--- 安裝完後在專案下 npm install
+
+--- 在根目錄下的config.js修改:
 
 1. config.topic (送發的topic) 
 ![](https://i.imgur.com/lSL6zjd.png)
@@ -23,7 +27,7 @@ tags: PaulhuHsieh
 
 duration的值可以改變送發資料的頻率
 
-傳至mqtt的值則需自行撰寫一個標準的json格式
+傳至mqtt的值則需自行撰寫一個標準的json格式資料
 
 範例為 BaseData= '{"hello":"world"}';
 
