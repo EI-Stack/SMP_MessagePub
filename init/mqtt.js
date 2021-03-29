@@ -148,11 +148,7 @@ mqtt.on("connect", function () {
                 publish(topic, AccumulationTimeData, options);
                 break;
         }
-
-
     }, duration);
-
-
     // mqtt.subscribe(topic);
     function publish(topic, msg, options) {
         if (mqtt.connected && count <= 100000) {
