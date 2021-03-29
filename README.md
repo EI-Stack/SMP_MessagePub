@@ -27,7 +27,7 @@ topic: smp/metering/data
 
 duration的值可以改變送發資料的頻率 (單位為毫秒)
 
-而傳遞的資料的部分如下：
+而傳遞的資料由BaseData的字串組成 (json格式)
 
 ### 變數產生一率用Math.random()來隨機產生數值決定哪一組固定的資料，詳見以下描述
 
