@@ -1,0 +1,49 @@
+---
+applications:
+- name: api-dataworker-wise-1.0.0
+  host: api-dataworker-wise
+  hosts:
+  - api-dataworker-wise
+  - api-dataworker-wise-1-0-0
+  version: 1.0.0
+  buildpack: nodejs_buildpack
+  memory: 128M
+  disk_quota: 128M
+services:
+- rabbitmq
+- redis
+- mongodb
+- postgresql
+env:
+  app_version: '1.0.0'
+  service_mqtt: 'true'
+  service_influxdb: 'true'  
+  service_mongodb: 'false'
+  service_postgres: 'false'
+  service_redis: 'false'
+  iscluster: false
+  mqtt_topic: '/Advantech/#'
+  mqtt_checktopic: '/Advantech'
+  mqtt_pgtopic: '/Advantech/pg/#'
+  mqtt_checkpgtopic: '/Advantech/pg'
+  mqtt_retain: 'true'
+  schema_meta: 'json-schema-draft-04.json'
+  schema_refs: 'http://json-schema.org/draft-04/schema'
+  restful_verification: 'false'
+  restful_maxamount: 1000
+  restful_defaultamount: 100
+  restful_order: 'DESC'
+  mongodb_service_name: 'mongodb'
+  mongodb_host: 'mongo'
+  mongodb_username: 'dataworker'
+  mongodb_password: 'good4dataworker'
+  mongodb_db: 'dataworkers'
+  mongodb_collection: 'dataworkers'
+  influxdb_service_name: 'influxdb-develop'
+  influxdb_ip: '3.0.61.62'
+  influxdb_port: 8086
+  influxdb_username: 'wise'
+  influxdb_password: 'good4wise'
+  influxdb_db: 'wise'
+  postgres_service_name: 'postgresql'
+  postgres_db: 'dataworker'
